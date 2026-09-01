@@ -56,7 +56,7 @@ function Index() {
       {/* Seção 1 — escura, logo grande centralizada */}
       <section className="relative overflow-hidden px-5 pb-24 pt-16 lg:px-8"><div className="absolute inset-0 bg-[radial-gradient(circle_at_76%_28%,rgba(212,170,93,.17),transparent_30%),radial-gradient(circle_at_15%_75%,rgba(222,198,155,.05),transparent_28%)]"/><div className="absolute right-[-12%] top-20 h-96 w-96 rounded-full border border-[#d4aa5d]/10 blur-3xl"/>
         <motion.div initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7 }} className="relative mx-auto max-w-3xl text-center">
-          <img src={logo} alt="Espaço Mente Brilhante — Psicologia e Neuropsicologia" className="mx-auto h-40 w-auto object-contain sm:h-52 lg:h-64"/>
+          <img src={logo} alt="Espaço Mente Brilhante — Psicologia e Neuropsicologia" className="mx-auto h-32 w-auto object-contain sm:h-40 lg:h-48"/>
           <span className="mt-10 inline-flex items-center gap-2 rounded-full border border-[#d4aa5d]/30 bg-[#d4aa5d]/10 px-4 py-2 text-xs font-bold uppercase tracking-[.22em] text-[#e2bf79]"><Sparkles className="h-4 w-4"/> Presencial e online</span>
           <h1 className="mt-7 font-serif text-5xl leading-[1.02] sm:text-6xl lg:text-7xl">Cuidar da mente é <span className="text-[#dfba70]">transformar vidas.</span></h1>
           <p className="mt-7 text-lg leading-relaxed text-white/65 sm:text-xl">Um espaço de acolhimento, compreensão e cuidado para você, sua família e suas necessidades.</p>
