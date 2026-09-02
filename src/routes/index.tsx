@@ -4,10 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Check, ChevronDown, Instagram, MapPin, MessageCircle, Sparkles } from "lucide-react";
 import logoAsset from "../assets/logo.png.asset.json";
 import waAsset from "../assets/whatsapp.png.asset.json";
-import sobrePhoto from "../assets/francineia-placeholder.jpg";
+import sobrePhotoAsset from "../assets/francineia.png.asset.json";
 
 const logo = logoAsset.url;
 const waIcon = waAsset.url;
+const sobrePhoto = sobrePhotoAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
