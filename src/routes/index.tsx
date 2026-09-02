@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import type { LucideIcon } from "lucide-react";
 import { ArrowRight, BookOpen, Brain, Check, ChevronDown, ClipboardList, Facebook, Heart, Instagram, Leaf, MapPin, MessageCircle, Puzzle, Sparkles, Sun, } from "lucide-react";
 import logoAsset from "../assets/logo.png.asset.json";
 import waAsset from "../assets/whatsapp.png.asset.json";
@@ -18,7 +19,7 @@ export const Route = createFileRoute("/")({
 });
 
 const wa = "https://wa.me/5592991819513";
-const services = [
+const services: [LucideIcon, string, string][] = [
   [Puzzle, "Atendimento para TEA", "Acolhimento e estratégias individualizadas."],
   [Brain, "Atendimento para TDAH", "Compreensão e estratégias para diferentes necessidades."],
   [BookOpen, "Dificuldades de aprendizagem", "Investigação e intervenção individualizada."],
