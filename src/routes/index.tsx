@@ -45,8 +45,8 @@ const faqs = [
   ["Como faço para agendar?", "Clique em qualquer botão de WhatsApp da página e envie uma mensagem. A equipe poderá orientar os próximos passos."],
 ];
 
-const btn = "btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#FEF3C7] via-[#FBBF24] to-[#D97706] px-7 py-4 font-semibold text-[#17110a] shadow-[0_0_25px_rgba(251,191,36,.45),0_10px_30px_rgba(180,83,9,.25)] transition hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(251,191,36,.55),0_12px_35px_rgba(180,83,9,.3)]";
-const outline = "btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#FEF3C7] via-[#FBBF24] to-[#D97706] px-7 py-4 font-semibold text-[#17110a] shadow-[0_0_25px_rgba(251,191,36,.45),0_10px_30px_rgba(180,83,9,.25)] transition hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(251,191,36,.55),0_12px_35px_rgba(180,83,9,.3)]";
+const btn = "btn-gold";
+const outline = "btn-gold";
 
 function Index() {
   const [faq, setFaq] = useState<number | null>(null);
