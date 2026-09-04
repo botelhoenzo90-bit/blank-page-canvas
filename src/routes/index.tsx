@@ -45,14 +45,14 @@ const faqs = [
   ["Como faço para agendar?", "Clique em qualquer botão de WhatsApp da página e envie uma mensagem. A equipe poderá orientar os próximos passos."],
 ];
 
-const btn = "btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-[#D4AF37] px-7 py-4 font-semibold text-[#17110a] shadow-[0_14px_38px_rgba(212,175,55,.2)] transition hover:-translate-y-0.5 hover:bg-[#EBD78A]";
-const outline = "btn-shine inline-flex items-center justify-center gap-2 rounded-full border border-[#D4AF37]/45 px-7 py-4 font-semibold text-[#F0D878] transition hover:bg-[#D4AF37]/10";
+const btn = "btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#FEF3C7] via-[#FBBF24] to-[#D97706] px-7 py-4 font-semibold text-[#17110a] shadow-[0_0_25px_rgba(251,191,36,.45),0_10px_30px_rgba(180,83,9,.25)] transition hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(251,191,36,.55),0_12px_35px_rgba(180,83,9,.3)]";
+const outline = "btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#FEF3C7] via-[#FBBF24] to-[#D97706] px-7 py-4 font-semibold text-[#17110a] shadow-[0_0_25px_rgba(251,191,36,.45),0_10px_30px_rgba(180,83,9,.25)] transition hover:-translate-y-0.5 hover:shadow-[0_0_35px_rgba(251,191,36,.55),0_12px_35px_rgba(180,83,9,.3)]";
 
 function Index() {
   const [faq, setFaq] = useState<number | null>(null);
   const go = (id: string) => { document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); };
   return <div className="min-h-screen overflow-x-hidden bg-[#070605] text-[#f8f2e7]">
-    <style>{`@keyframes belt{from{transform:translateX(0)}to{transform:translateX(-50%)}}.belt{animation:belt 38s linear infinite;width:max-content;will-change:transform}@media(max-width:640px){.belt{animation-duration:30s}}@keyframes shine{from{left:-120%}to{left:120%}}.btn-shine{position:relative;overflow:hidden}.btn-shine::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-22deg);pointer-events:none}.btn-shine:hover::after{animation:shine .85s ease-in-out}`}</style>
+    <style>{`@keyframes belt{from{transform:translateX(0)}to{transform:translateX(-50%)}}.belt{animation:belt 38s linear infinite;width:max-content;will-change:transform}@media(max-width:640px){.belt{animation-duration:30s}}@keyframes shine{from{left:-120%}to{left:120%}}.btn-shine{position:relative;overflow:hidden}.btn-shine::before{content:"";position:absolute;top:0;left:0;right:0;height:45%;background:linear-gradient(180deg,rgba(255,255,255,.28),transparent);pointer-events:none;border-radius:inherit;z-index:1}.btn-shine::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),rgba(255,255,255,.2),transparent);transform:skewX(-22deg);pointer-events:none;z-index:2}.btn-shine:hover::after{animation:shine .85s ease-in-out}`}</style>
 
     <main id="inicio">
       {/* Seção 1 — escura, logo grande centralizada */}
