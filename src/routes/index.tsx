@@ -45,14 +45,14 @@ const faqs = [
   ["Como faço para agendar?", "Clique em qualquer botão de WhatsApp da página e envie uma mensagem. A equipe poderá orientar os próximos passos."],
 ];
 
-const btn = "inline-flex items-center justify-center gap-2 rounded-full bg-[#D4AF37] px-7 py-4 font-semibold text-[#17110a] shadow-[0_14px_38px_rgba(212,175,55,.2)] transition hover:-translate-y-0.5 hover:bg-[#EBD78A]";
-const outline = "inline-flex items-center justify-center gap-2 rounded-full border border-[#D4AF37]/45 px-7 py-4 font-semibold text-[#F0D878] transition hover:bg-[#D4AF37]/10";
+const btn = "btn-shine inline-flex items-center justify-center gap-2 rounded-full bg-[#D4AF37] px-7 py-4 font-semibold text-[#17110a] shadow-[0_14px_38px_rgba(212,175,55,.2)] transition hover:-translate-y-0.5 hover:bg-[#EBD78A]";
+const outline = "btn-shine inline-flex items-center justify-center gap-2 rounded-full border border-[#D4AF37]/45 px-7 py-4 font-semibold text-[#F0D878] transition hover:bg-[#D4AF37]/10";
 
 function Index() {
   const [faq, setFaq] = useState<number | null>(null);
   const go = (id: string) => { document.getElementById(id)?.scrollIntoView({ behavior: "smooth" }); };
   return <div className="min-h-screen overflow-x-hidden bg-[#070605] text-[#f8f2e7]">
-    <style>{`@keyframes belt{from{transform:translateX(0)}to{transform:translateX(-50%)}}.belt{animation:belt 38s linear infinite;width:max-content;will-change:transform}@media(max-width:640px){.belt{animation-duration:30s}}`}</style>
+    <style>{`@keyframes belt{from{transform:translateX(0)}to{transform:translateX(-50%)}}.belt{animation:belt 38s linear infinite;width:max-content;will-change:transform}@media(max-width:640px){.belt{animation-duration:30s}}@keyframes shine{from{left:-120%}to{left:120%}}.btn-shine{position:relative;overflow:hidden}.btn-shine::after{content:"";position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-22deg);pointer-events:none}.btn-shine:hover::after{animation:shine .85s ease-in-out}`}</style>
 
     <main id="inicio">
       {/* Seção 1 — escura, logo grande centralizada */}
