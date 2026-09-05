@@ -98,17 +98,20 @@ function Index() {
         <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row"><a href="https://www.facebook.com/n.mendesmagalhaes" target="_blank" rel="noreferrer" className={btn}>Facebook <Facebook className="h-5 w-5"/></a><a href="https://www.instagram.com/francineia_magalhaes/" target="_blank" rel="noreferrer" className={btn}>Instagram <Instagram className="h-5 w-5"/></a></div>
       </div></section>
 
-      {/* Como funciona — linha do tempo vertical */}
-      <section id="como" className="bg-[#eee5d7] px-5 py-16 text-[#19140e] lg:px-8"><div className="mx-auto max-w-3xl text-center"><p className="text-xs font-bold uppercase tracking-[.3em] text-[#8B6914]">Como funciona</p><h2 className="mt-4 font-serif text-4xl sm:text-5xl">Um caminho simples para começar</h2>
-        <div className="relative mx-auto mt-10 max-w-2xl">
-          <div className="absolute bottom-6 left-[27px] top-6 w-[3px] rounded-full bg-gradient-to-b from-[#B8860B] via-[#D4AF37] to-[#F0D878] shadow-[0_0_14px_rgba(212,175,55,.5)] sm:left-1/2 sm:-translate-x-1/2"/>
-          <div className="space-y-8">
+      {/* Como funciona — vertical no mobile, horizontal no desktop */}
+      <section id="como" className="bg-[#eee5d7] px-5 py-16 text-[#19140e] lg:px-8"><div className="mx-auto max-w-6xl text-center"><p className="text-xs font-bold uppercase tracking-[.3em] text-[#8B6914]">Como funciona</p><h2 className="mt-4 font-serif text-4xl sm:text-5xl">Um caminho simples para começar</h2>
+        <div className="relative mx-auto mt-10 max-w-2xl lg:max-w-6xl">
+          {/* linha vertical no mobile */}
+          <div className="absolute bottom-6 left-[27px] top-6 w-[3px] rounded-full bg-gradient-to-b from-[#B8860B] via-[#D4AF37] to-[#F0D878] shadow-[0_0_14px_rgba(212,175,55,.5)] lg:hidden"/>
+          {/* linha horizontal no desktop */}
+          <div className="pointer-events-none absolute left-0 right-0 top-7 hidden h-[3px] rounded-full bg-gradient-to-r from-[#B8860B] via-[#D4AF37] to-[#F0D878] shadow-[0_0_14px_rgba(212,175,55,.5)] lg:block"/>
+          <div className="flex flex-col gap-8 lg:grid lg:grid-cols-4 lg:gap-6">
             {[[MessageCircle,"Converse conosco","Clique no WhatsApp e conte brevemente o que você procura."],[ClipboardList,"Entenda a necessidade","O primeiro contato ajuda a orientar o próximo passo."],[Heart,"Construa seu cuidado","O acompanhamento considera sua realidade e suas necessidades."],[Sparkles,"Avance com segurança","Você segue com orientação e acompanhamento profissional."]].map(([Icon,t,d],i)=>{
               const StepIcon = Icon as LucideIcon;
               return (
-              <motion.div key={t as string} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: .55, delay: i * .1 }} className={`relative flex items-center gap-5 text-left sm:w-1/2 ${i % 2 === 0 ? "sm:ml-auto sm:pl-12" : "sm:flex-row-reverse sm:pr-12 sm:text-right"}`}>
-                <span className={`absolute left-0 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[#F0D878] bg-[linear-gradient(135deg,#f3e5ab,#d4af37)] text-[#17110a] shadow-[0_0_22px_rgba(212,175,55,.55)] sm:static ${i % 2 === 0 ? "sm:absolute sm:-left-7 sm:right-auto" : "sm:absolute sm:-right-7 sm:left-auto"}`}><StepIcon className="h-6 w-6"/></span>
-                <div className={`ml-20 flex-1 rounded-[1.5rem] border border-[#8B6914]/15 bg-white/80 p-5 shadow-[0_12px_35px_rgba(80,55,10,.08)] backdrop-blur transition hover:-translate-y-1 hover:border-[#D4AF37]/50 sm:ml-0`}>
+              <motion.div key={t as string} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: .55, delay: i * .1 }} className="relative flex items-center gap-5 text-left lg:flex-col lg:items-center lg:text-center">
+                <span className="absolute left-0 flex h-14 w-14 shrink-0 items-center justify-center rounded-full border-2 border-[#F0D878] bg-[linear-gradient(135deg,#f3e5ab,#d4af37)] text-[#17110a] shadow-[0_0_22px_rgba(212,175,55,.55)] lg:static lg:mb-4"><StepIcon className="h-6 w-6"/></span>
+                <div className="ml-20 flex-1 rounded-[1.5rem] border border-[#8B6914]/15 bg-white/80 p-5 shadow-[0_12px_35px_rgba(80,55,10,.08)] backdrop-blur transition hover:-translate-y-1 hover:border-[#D4AF37]/50 lg:ml-0 lg:w-full">
                   <span className="font-serif text-sm font-bold text-[#C9A227]">Passo 0{i+1}</span>
                   <h3 className="mt-1 font-serif text-2xl">{t as string}</h3>
                   <p className="mt-1.5 text-sm leading-relaxed text-[#19140e]/60">{d as string}</p>
