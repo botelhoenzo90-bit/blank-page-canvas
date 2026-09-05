@@ -67,6 +67,21 @@ function Index() {
         </motion.div>
       </section>
 
+      {/* Faixa dourada — informações em movimento */}
+      <section aria-label="Informações" className="relative overflow-hidden border-y border-[#F0D878]/40 bg-[linear-gradient(120deg,#8B6914,#D4AF37_35%,#F0D878_50%,#D4AF37_65%,#8B6914)] py-3.5 shadow-[0_10px_40px_rgba(212,175,55,.35)]">
+        <div className="belt flex items-center gap-10">
+          {[...Array(2)].map((_, copy) => (
+            <div key={copy} className="flex shrink-0 items-center gap-10">
+              {["Atendimento presencial e online","Psicóloga e Neuropsicóloga Clínica","CRP 10/06883","Crianças, adolescentes e adultos","Acolhimento e ciência","Atendimento humanizado"].map((info) => (
+                <span key={info} className="flex items-center gap-10 whitespace-nowrap text-sm font-bold uppercase tracking-[.18em] text-[#17110a]">
+                  {info} <Sparkles className="h-4 w-4" />
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Sua jornada — clara */}
       <section id="dor" className="relative overflow-hidden bg-[#eee5d7] px-5 py-16 text-[#19140e] lg:px-8"><div className="absolute left-0 top-0 h-40 w-full bg-[radial-gradient(circle_at_50%_0%,rgba(139,105,20,.12),transparent_60%)]"/><div className="relative mx-auto max-w-7xl text-center"><p className="text-xs font-bold uppercase tracking-[.3em] text-[#8B6914]">Sua jornada merece atenção</p><h2 className="mx-auto mt-4 max-w-4xl font-serif text-4xl leading-tight sm:text-5xl">Quando algo não vai bem, buscar compreensão pode mudar a forma de viver essa fase.</h2><p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-[#19140e]/65">Ansiedade, dificuldades de aprendizagem, desafios comportamentais, dúvidas sobre desenvolvimento ou aquela sensação de que algo precisa ser melhor compreendido podem trazer insegurança para a rotina.</p><div className="mx-auto mt-8 grid max-w-5xl gap-4 sm:grid-cols-2">{["Você sente que não consegue organizar o que está acontecendo?","Seu filho apresenta dificuldades que precisam ser melhor compreendidas?","Há comportamentos, emoções ou aprendizagem gerando preocupação?","Você gostaria de ter orientação profissional para dar o próximo passo?"].map((t,i)=><div key={i} className="rounded-[1.7rem] border border-[#8B6914]/15 bg-white/70 p-6 text-center shadow-[0_12px_35px_rgba(80,55,10,.06)]"><span className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-[#C9A227]/15 font-serif text-lg text-[#8B6914]">0{i+1}</span><p className="mt-4 font-medium leading-relaxed">{t}</p></div>)}</div><a href={wa} target="_blank" rel="noreferrer" className={btn + " mt-8"}>Quero conversar sobre isso <ArrowRight className="h-5 w-5"/></a></div></section>
 
